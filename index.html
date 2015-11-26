@@ -3,10 +3,26 @@
 <head profile="http://gmpg.org/xfn/11">
 <title>NIT-T</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name=viewport content="width=device-width, initial-scale=1">
 <meta http-equiv="imagetoolbar" content="no" />
 <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<link rel="stylesheet" href="flex/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="flex/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "fade",
+          controlsContainer: ".flex-container",
+          slideshow: true,        
+          slideshowSpeed: 4000
+    });
+  });
+</script>
+<!--
 <script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-slidedeck.pack.lite.js"></script>
+-->
 </head>
 <body id="top">
 <div class="wrapper row1">
@@ -31,6 +47,7 @@
 </div>
 <!-- ####################################################################################################### -->
 <div class="wrapper row2">
+ <center>
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.html">About</a></li>
@@ -55,11 +72,12 @@
     </ul>
     <div  class="clear"></div>
   </div>
+</center>
 </div>
 <!-- ####################################################################################################### -->
 <div class="wrapper row3">
+  <!--
   <div id="featured_slide">
-    <!-- ####################################################################################################### -->
     <dl class="slidedeck">
       <dt>NITT</dt>
       <dd><img src="images/slide-3.jpg" alt="" /></dd>
@@ -73,6 +91,22 @@
       <dd><img src="images/slide-5.jpg" alt="" /></dd>
     </dl>
   </div>
+-->
+<center>
+  <div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="images/slide-1.jpg" />
+    </li>
+    <li>
+      <img src="images/slide-2.jpg" />
+    </li>
+    <li>
+      <img src="images/slide-3.jpg" />
+    </li>
+  </ul>
+</div>
+</center>
   <!-- ####################################################################################################### -->
 </div>
 <!-- ####################################################################################################### -->
@@ -104,7 +138,7 @@
             <li><a href="#">Scholarship</a></li>
           </ul>
         </div>
-        <h2 class="title">Latest Gallery Images</h2>
+        <h2 class="title">Gallery</h2>
         <div id="hpage_gallery">
           <ul class="clear">
             <li><a href="#"><img src="images/gallery-1.jpg" alt="" /></a></li>
