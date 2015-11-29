@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 0;
+  z-index: 9999;
   overflow: hidden;
   display: none;
   -webkit-user-select: none;
@@ -31,7 +31,7 @@
 }
 
 #swipebox-slider .slide {
-  background-image: url(../images/background.jpg) no-repeat center center;
+  background: url(../images/loader.gif) no-repeat center center;
   height: 100%;
   line-height: 1px;
   text-align: center;
@@ -59,7 +59,7 @@
 #swipebox-action, #swipebox-caption {
   position: absolute;
   left: 0;
-  z-index: 0;
+  z-index: 999;
   height: 50px;
   width: 100%;
 }

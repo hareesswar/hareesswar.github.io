@@ -31,7 +31,6 @@ img{max-width:100%;}
 body {
 	font-family : verdana, arial, helvetica, sans-serif; 	
 	font-size:100%;
-	background-color: "#12344";
 }
 .wrap {
 	width:80%;
@@ -189,7 +188,7 @@ body {
 	position: absolute;
 	top:163px;
 	height: 50px;
-	z-index: 0;
+	z-index: 1000;
 	width: 100%;
 	border-top: 1px solid #C7E603;
 	background: url(../images/nav-bg.png) repeat-x #80B404;
