@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>
+      @font-face{
+ font-family:'digital-clock-font';
+ src: url('fonts/digital-7.ttf');
+}
+      p {
+  text-align: center;
+  font-family: 'digital-clock-font';
+  font-size: 3em;
+  color: white;
+    text-shadow: 0 0 3px red;
+}
+@demo{
+    text-align: center;
+  font-family: 'digital-clock-font';
+  font-size: 1em;
+  color: white;
+    text-shadow: 0 0 3px red;
+}
+      body {
+        background-image: url("images/stars.jpg");
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat;
+        animation: animatedBackground 20s linear infinite;
+        -moz-animation: animatedBackground 20s linear infinite;
+        -webkit-animation: animatedBackground 20s linear infinite;
+      }    
+      @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 0 100%; }
+      }
+      @-webkit-keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 0 100%; }
+      }
+      @-moz-keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 0 100%; }
+      }
+      </style>
+    </head>
+
+    <body>
+
+      <p>Sense . Control . Actuate </p><p> In</p>
+      <p id="demo"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 29, 2018 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds;
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+
+        
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
