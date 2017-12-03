@@ -1,7 +1,4 @@
-@font-face{
- font-family:'digital-clock-font';
- src: url('fonts/digital-7.ttf');
-}
+
 * {
   line-height: 1;
   margin: 0;
@@ -48,4 +45,11 @@ p {
   font-size: 3em;
   color: white;
     text-shadow: 0 0 3px red;
+}
+@media screen and (max-width: 480px) {
+
+   p { 
+      font-size: 1em; 
+   }
+
 }
