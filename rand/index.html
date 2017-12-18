@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <style type="text/css">
+        @font-face{
+         font-family:'digital-clock-font';
+         src: url('fonts/digital-7.ttf');
+        }
+       
+body{
+  background-color: black;
+  color: white;
+}
+#nittlogo{
+  position: absolute;
+  margin-top: 0px;
+  height: auto;
+  width: 330px;
+}
+#sensorslogo{
+  display: block;
+  margin:auto; 
+  margin-top: 0px;
+  width:400px;
+}
+#ham{
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.background{
+  background-color: green;
+}
+@media screen and (max-width: 480px) {
+  #nittlogo{
+    width: 60%;
+  }
+  #sensorslogo{
+    width:85%;
+  }
+  .wrap{
+    margin-top: 50px;
+  }
+}
+
+      </style>
+      
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+  
+        <div class="outer">
+               <img src="images/nittlogo.png" id="nittlogo">
+      <ul id="slide-out" class="side-nav">
+        <li>SENSORS 2018</li>
+      </ul>
+  <div id="ham">
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+       
+         
+          <img src="images/logo_blue.gif" id="sensorslogo" >
+         
+          <div class="wrap">
+            
+            <div class="cube">
+              <a href="#" data-activates="slide-out" class="button-collapse">
+              <div class="front">
+                Events
+              </div>
+              <div class="back">
+                Workshops
+              </div>
+              <div class="top">
+                Guest Lectures
+              </div>
+              <div class="bottom">
+                Accomodation
+              </div>
+              <div class="left">
+                Contact
+              </div>
+              <div class="right">
+                Jan 29 and 30
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>    
+     
+
+
+
+        <style>
+          
+
+            .wrap {
+                margin-top: 30px;
+                perspective: 1000px;
+                perspective-origin: 50% 50%;
+                
+            }
+
+            
+
+            .cube {
+                margin: auto;
+                position: relative;
+                height: 100px;
+                width: 100px;
+                transform-style: preserve-3d;
+            }
+                .cube div {
+                    position: absolute;
+                    box-sizing: border-box;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding-top: 30px;
+                    opacity: 0.8;
+                    background-color: #000;
+                    border: solid 1px #eee;
+                    color: #fff;
+                    font-family:'digital-clock-font';
+                    transition: transform 0.2s ease-in;
+                }
+
+            .front {
+                transform: translateZ(50px);
+            }
+
+            .back {
+                transform: translateZ(-50px) rotateY(180deg);
+            }
+
+            .right {
+                transform: rotateY(-270deg) translateX(50px);
+                transform-origin: top right;
+            }
+
+            .left {
+                transform: rotateY(270deg) translateX(-50px);
+                transform-origin: center left;
+            }
+
+            .top {
+                transform: rotateX(-270deg) translateY(-50px);
+                transform-origin: top center;
+            }
+
+            .bottom {
+                transform: rotateX(270deg) translateY(50px);
+                transform-origin: bottom center;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+
+                to {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+
+            .cube {
+                animation: rotate 20s infinite linear;
+            }
+
+            .wrap:hover .front {
+                transform: translateZ(100px);
+            }
+
+            .wrap:hover .back {
+                transform: translateZ(-100px) rotateY(180deg);
+            }
+
+            .wrap:hover .right {
+                transform: rotateY(-270deg) translateZ(50px) translateX(50px);
+            }
+
+            .wrap:hover .left {
+                transform: rotateY(270deg) translateZ(50px) translateX(-50px);
+            }
+
+            .wrap:hover .top {
+                transform: rotateX(-270deg) translateZ(50px) translateY(-50px);
+            }
+
+            .wrap:hover .bottom {
+                transform: rotateX(270deg) translateZ(50px) translateY(50px);
+            }
+     
+          
+        </style>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script type="text/javascript"> $(".button-collapse").sideNav();</script>
+    </body>
+  </html>
