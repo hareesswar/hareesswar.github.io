@@ -1,0 +1,453 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <style type="text/css">
+               @font-face{
+         font-family:'Lato-Italic';
+         src: url('fonts/Lato-Italic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Regular';
+         src: url('fonts/Lato-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Light';
+         src: url('fonts/Lato-Light.ttf');
+        }
+        @font-face{
+         font-family:'Lato-LightItalic';
+         src: url('fonts/Lato-LightItalic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Hairline';
+         src: url('fonts/Lato-Hairline.ttf');
+        }
+        body{
+          background-color: #cfd8dc;
+        }
+        .team_pic{
+          border-radius: 50%;
+          height: 170px;
+          width: 170px;
+          
+        }
+        .events_pic{   
+          border-radius: 5px;       
+          width: 100%;
+          height: auto;
+        }
+        .team_pic:hover{
+          box-shadow:
+        
+        0 0 50px #fff,            
+        -10px 0 80px #f0f,       
+        10px 0 80px #0ff;
+        }
+        a#sensors{
+          color:white !important;
+        }
+        .header{
+          margin-top: 0px;
+          width: 100%;
+          background-color: black !important;
+          color:white !important;
+          height:100px;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+        .footer_custom {
+          position: relative;
+          
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          font-size: 13px;
+          text-align: center;
+        }
+        .title{
+          text-align: center;
+          font-family: Lato-Light;
+          
+          color:white !important;
+        }
+
+        .container{
+          margin-top: -30px;
+          font-family: Lato-Regular;
+        }
+        #ham{
+          float:left;
+          display: inline-block;
+          text-align: left !important;
+          padding-top: 15px;
+          padding-left: 10px;
+        }
+        .base_panel{
+          width:100%;
+          height:auto;
+          background-color:white;
+          border-radius:1px;
+        }
+        @media screen and (max-width: 480px) {
+          .header{
+            font-size: 20px;
+            padding-top: 20px;
+          }
+          .ham{
+            padding-left: 5px;
+          }
+          .card-title{
+            font-size: 17px !important;
+          }  
+        
+        }
+      </style>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+  
+      
+    <div class="header">
+      <div id="ham">
+        <a href="#" data-activates="slide-out" class="button-collapse" style="color: white !important;"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="title">
+      <a href="index.html" id="sensors">Sensors '18  | </a>  E V E N T S
+      </div>
+    </div>
+
+      <ul id="slide-out" class="side-nav" style="z-index: 99999;color: #523 !important;font-family:Lato-Regular;">
+       <li style="height: 81px;cursor: pointer;" onclick="window.location.href='index.html'" ><div class="userView">
+      <div class="background" style="height: 81px;">
+        <center><img src="images/temp1.jpg" style="width: 300px;"></center>
+      </div>
+         </div></li>
+           <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="events.html" class="collapsible-header">Events<i class="material-icons">whatshot</i></a>
+            
+          </li>
+        </ul>
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="workshops.html" class="collapsible-header">Workshops<i class="material-icons">event_available</i></a>
+           
+          </li>
+        </ul>
+      </li>
+      <li><div class="divider" class="collapsible-header"></div></li>
+      <li><a href="contacts.html" class="collapsible-header">Contacts<i class="material-icons">group</i></a></li>
+      <li><a href="about.html" class="collapsible-header">About<i class="material-icons">feedback</i></a></li>
+      <li><a href="faqs.html" class="collapsible-header">FAQs<i class="material-icons">lightbulb_outline</i></a></li>
+      <li><a href="schedule.pdf" download class="collapsible-header">Schedule<i class="material-icons">schedule</i></a></li>
+ 
+      <li><a href="https://www.facebook.com/sensorsNITTrichy" target="_blank" class="collapsible-header">Connect to Facebook<i class="material-icons">thumb_up</i></a></li>
+       <li><div class="divider"></div></li>
+      <li style="font-family:Lato-Italic;"><a href="#!" class="collapsible-header">Join Us this January 29<sup>th</sup> &amp; 30<sup>th</sup><i class="material-icons">sentiment_very_satisfied</i></a></li>
+      <li><div class="divider"></div></li>
+      
+      </ul>
+  <div class="container"> 
+    <div class="base_panel">
+      <div class="card-panel grey lighten-3">
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/kk2.png" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">T R A I L &nbsp; B Y &nbsp; T R O N I X</span>
+                               Ever dreamt of being bombarded by a stream of resistors, diodes, capacitors
+                              and inductors?<p> If yes, then its your time. Portray your talents and show us what
+                              these elements are capable of.<p> Fantasy is what grabs your attention?
+                              Are you good at deciphering hints to build a circuit? Yes? <p>Then this is designed and soldered for you! Grab the chance.
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal1').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/coding.gif" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">C O D E &nbsp; Q U E S T</span>
+                                Do you enjoy deciphering codes? Do you love to give your fingers an exercise on keyboard? 
+                                Well, who doesn’t.<p> Come on and join us for this exciting event of Code Quest and find your treasure. <p> Program your brain cells and get ready to be the “Coder”.
+                                <p>if (You’re a coder)
+                                goto Sensors;<br>
+                                else<br>
+                                printf("Well, there’s no better place to start learning!");<br>
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal2').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/algo.png" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">A L G O &nbsp; W A R R I O R S</span>
+                               In today's fast moving world, no one want their activities to be delayed. this demand of ours has led us to the era of Algorithms. An Algo is a methodical set of steps that can be used to make calculations, resolve problems and reach decisions.<p>
+                              "An algorithm isn't a particular calculation, but the method followed when making the calculation"
+                              <p>If you find all this interesting , come and test your wisdom and compete with others!
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal3').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/build.gif" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">I D E A T E&nbsp; &AMP; &nbsp; B U I L D</span>
+                               Do you have fictional thoughts of solving a problem? <p>Do you want to have a hands on experience to give a structure to your idea?<p>
+                               Then this is completely apt for you. Don’t miss out this chance.
+                               <p>&nbsp;<p>&nbsp;<p>&nbsp;<p>&nbsp;
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal4').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/algebra.jpg" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">L t&nbsp; D O E S N ' T &nbsp; E X I S T</span> You have to be 'ODD' to be number 'ONE'!<p>
+                                  Ever tried to unlock that door of Math which is filled with fun,exciting and engaging rounds of quizzes and puzzles?<p> If not, then brace yourself and get ready to play with numbers in a unique way!!
+                                    <p>&nbsp;<p>&nbsp;<p>&nbsp;
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal5').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/click.jpg" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">T E C H &nbsp; C L I C K</span>
+                                Taking an Image, freezing a moment reveals how rich reality truly is!<p>
+                                You need not be a professional photographer to capture that reality. Creativity is all about giving yourself permission to see things differently.<p>
+                                For all those photographers with a passion to reason, TechClick is the perfect platform for you to unleash your talent.
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal6').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6 offset-m3 offset-l3">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/events_icons/brain.jpg" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">E X&nbsp; Q U I Z &nbsp; M E</span>
+                               It's at this time that the tidbits of trivia you accumulated over time come in handy.<p> Participate in this general themed quiz, work out questions and rack your head until the answer finally strikes you! 
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal7').modal('open');" href="#">RULES &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+            </div>
+
+
+
+      </div>
+    </div>
+  </div>
+   <div id="modal1" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                         <span class="card-title"style="text-align:center;">T R A I L &nbsp; B Y &nbsp; T R O N I X</span>
+                         <div class="divider"></div>
+                               <p>
+                                Stay Tuned for Updates!
+                      </div>
+                      <div class="divider"></div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                      </div>
+                    </div>
+  <div id="modal2" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">C O D E &nbsp; Q U E S T</span>
+                   <div class="divider"></div>
+                         <p>
+                          Stay Tuned for Updates!
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal3" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">A L G O &nbsp; W A R R I O R S</span>
+                   <div class="divider"></div>
+                         <p>
+                          Stay Tuned for Updates!
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal4" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">I D E A T E &nbsp; &AMP; &nbsp; B U I L D</span>
+                   <div class="divider"></div>
+                         <p>
+                          Stay Tuned for Updates!
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal5" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">L t &nbsp; D O E S N ' T &nbsp; E X I S T</span>
+                   <div class="divider"></div>
+                         <p>
+                          Stay Tuned for Updates!
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal6" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">T E C H &nbsp; C L I C K</span>
+                   <div class="divider"></div>
+                <p><b>RULES</b><p>
+                1. The participants are required to capture any of the day to day processes and provide a description for the captured image in terms of the technical phenomenon they are aware of.
+                 <p> 2. The participants can use one or more photographs of the same subject shot in different angles to illustrate the phenomena better.<p>
+                3. You are free to use any camera(Professional/mobile) to click pictures.<p>
+                4. All the pictures must have accurate captions and technical description ,written in English only.<p>
+                5. Using Photoshop to bring in any superficial effects is strictly not allowed.<p>
+                6. Entries should send the following info along with the picture:
+                <ul>
+                  <li>-> Name</li>
+                  <li>-> College Name and Location</li>
+                  <li>-> Contact Number</li>
+                  <li>-> Email</li>
+                  <li>-> Detailed description of the subject matter</li>
+                </ul>
+                7. The last date for submitting the entries is 5th January 2018<p>
+                8. Submissions will not be accepted once the deadline lapses.<p>
+                <b>CONTACTS</b><p>
+                Vaneesha:  9952214684<br>
+                Lalitha Rani: 9490848336
+                <p>
+                <b>JUDGING CRITERIA</b>
+                <ul>
+                  <li>-> Originality of the photo</li>
+                  <li>-> Concept and Technicality</li>
+                  <li>-> Caption and Description</li>
+                </ul>  
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal7" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">E X&nbsp; Q U I Z &nbsp; M E</span>
+                   <div class="divider"></div>
+                         <p>
+                          Stay Tuned for Updates!
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+ <div class="footer_custom" style="font-family:Lato-Italic;"><span style="color:red;">&lt;/&gt;</span> with <span style="color:red;">&hearts;</span> by <a href="contacts.html">Team Sensors'18</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+     
+      $(document).ready(function(){
+
+     $(".button-collapse").sideNav({
+         closeOnClick: false,
+         draggable: true,
+         menuWidth: 300
+      });
+      $('.collapsible').collapsible();
+       $('.modal').modal();
+    
+  });
+     </script>
+    </body>
+  </html>
+        
