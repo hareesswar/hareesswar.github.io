@@ -1,0 +1,509 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <style type="text/css">
+               @font-face{
+         font-family:'Lato-Italic';
+         src: url('fonts/Lato-Italic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Regular';
+         src: url('fonts/Lato-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Light';
+         src: url('fonts/Lato-Light.ttf');
+        }
+        @font-face{
+         font-family:'Lato-LightItalic';
+         src: url('fonts/Lato-LightItalic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Hairline';
+         src: url('fonts/Lato-Hairline.ttf');
+        }
+        body{
+          background-color: #cfd8dc;
+        }
+        .team_pic{
+          border-radius: 50%;
+          height: 170px;
+          width: 170px;
+          
+        }
+        .events_pic{   
+          border-radius: 5px;       
+          width: 100%;
+          height: auto;
+        }
+        .team_pic:hover{
+          box-shadow:
+        
+        0 0 50px #fff,            
+        -10px 0 80px #f0f,       
+        10px 0 80px #0ff;
+        }
+        a#sensors{
+          color:white !important;
+        }
+        .header{
+          margin-top: 0px;
+          width: 100%;
+          background-color: black !important;
+          color:white !important;
+          height:100px;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+        .footer_custom {
+          position: relative;
+          
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          font-size: 13px;
+          text-align: center;
+        }
+        .title{
+          text-align: center;
+          font-family: Lato-Light;
+          
+          color:white !important;
+        }
+
+        .container{
+          margin-top: -30px;
+          font-family: Lato-Regular;
+        }
+        #ham{
+          float:left;
+          display: inline-block;
+          text-align: left !important;
+          padding-top: 15px;
+          padding-left: 10px;
+        }
+        .base_panel{
+          width:100%;
+          height:auto;
+          background-color:white;
+          border-radius:1px;
+        }
+        @media screen and (max-width: 480px) {
+          .header{
+            font-size: 20px;
+            padding-top: 20px;
+          }
+          .ham{
+            padding-left: 5px;
+          }
+          .card-title{
+            font-size: 17px !important;
+          }  
+        
+        }
+      </style>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+  
+      
+    <div class="header">
+      <div id="ham">
+        <a href="#" data-activates="slide-out" class="button-collapse" style="color: white !important;"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="title">
+      <a href="index.html" id="sensors">Sensors '18  | </a>  W O R K S H O P S
+      </div>
+    </div>
+
+      <ul id="slide-out" class="side-nav" style="z-index: 99999;color: #523 !important;font-family:Lato-Regular;">
+       <li style="height: 81px;cursor: pointer;" onclick="window.location.href='index.html'" ><div class="userView">
+      <div class="background" style="height: 81px;">
+        <center><img src="images/temp1.jpg" style="width: 300px;"></center>
+      </div>
+         </div></li>
+           <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="events.html" class="collapsible-header">Events<i class="material-icons">whatshot</i></a>
+            
+          </li>
+        </ul>
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="workshops.html" class="collapsible-header">Workshops<i class="material-icons">event_available</i></a>
+           
+          </li>
+        </ul>
+      </li>
+      <li><div class="divider" class="collapsible-header"></div></li>
+      <li><a href="contacts.html" class="collapsible-header">Contacts<i class="material-icons">group</i></a></li>
+      <li><a href="about.html" class="collapsible-header">About<i class="material-icons">feedback</i></a></li>
+      <li><a href="faqs.html" class="collapsible-header">FAQs<i class="material-icons">lightbulb_outline</i></a></li>
+      <li><a href="schedule.pdf" download class="collapsible-header">Schedule<i class="material-icons">schedule</i></a></li>
+ 
+      <li><a href="https://www.facebook.com/sensorsNITTrichy" target="_blank" class="collapsible-header">Connect to Facebook<i class="material-icons">thumb_up</i></a></li>
+       <li><div class="divider"></div></li>
+      <li style="font-family:Lato-Italic;"><a href="#!" class="collapsible-header">Join Us this January 29<sup>th</sup> &amp; 30<sup>th</sup><i class="material-icons">sentiment_very_satisfied</i></a></li>
+      <li><div class="divider"></div></li>
+      
+      </ul>
+  <div class="container"> 
+    <div class="base_panel">
+      <div class="card-panel grey lighten-3">
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/Brain.png" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">B R A I N &nbsp; O &nbsp; B R A I N</span>
+                               Have you ever pondered how the world would seem if you could read people’s minds?
+                               <p> Don’t worry, it is exactly what we are going to show you during the entire span of 3 hours; using just basic electronics and software concepts. 
+                               
+                               <p>&nbsp;
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal1').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/roboticarm.png" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">S M A R T &nbsp; A R M <br>R O B O T &nbsp; S O R T E R</span>
+                                Industries are experiencing a major transformation, with robots replacing human labour for monotonous or high precision tasks.
+                                In this workshop, we will build a 3 DoF robotic arm. This arm will be capable of arranging objects placed haphazardly in front of it, into perfect order. 
+
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal2').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/appdev.jpg" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">A N D R O I D &nbsp; A P P <br> D E V E L O P M E N T</span>
+                              Have you ever desired to create your own android app?  <p>This workshop basically guides you to make your own app on the android platform, particularly a messaging app for personal use. It enables you to transfer media between two remote android devices using Firebase Service. 
+
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal3').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/virtual.png" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">V I R T U A L&nbsp; S C R I B B L E &nbsp;  P A D</span>
+                              Have you ever thought of how it will be when you can inscribe something on the computer's screen with just using your hands in plain air ? <p>Well , get delved to learn the basics of image processing and python that are needed to transform your finger movements to scribbles on the screen .
+
+                               <p>&nbsp;
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal4').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/quad.png" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">Q U A D&nbsp; C O P T E R</span>
+                                 Ever heard of the selfie drone? Yes, it has arrived. These Quadcopters are multi-rotor aerial robots implementing a simple propeller mechanism with powerful circuitry for endless real world applications. Its versatility and freedom to go anywhere, both indoors and outdoors is unparalleled and has established itself remarkably in the aviation sector. 
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal5').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="col s12 m6 l6">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/Gesture.png" class="events_pic">
+                                
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">G E S T U R E &nbsp; C O N T R O L <br> R O B O T</span>
+                                Ever wondered what I would be like to control a Robot with ease of gestures through your Smartphone ?<p>
+                                This workshop will guide you through to develop a differential drive robot that is controlled using hand gestures.
+                             
+                               
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal6').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                              </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+
+          <div class="row">
+                    
+                     <div class="col s12 m6 l6 offset-m3 offset-l3">
+                        <div class="card blue-grey lighten-4">
+                          <div class="card-image">
+                                <img src="images/workshops/SCADA.jpeg" class="events_pic">                               
+                              </div>
+                              <div class="card-content black-text"  style="font-family:Lato-Light">
+                                <span class="card-title"style="text-align:center;">S C A D A</span>
+                              Have you ever wondered what happens in the Operations Control Center (OCC) of an industry and how the technicians there control and ensure the safety of an entire plant? <p>
+                              No system can beat the judgement of a human being. The machine only controls while the man supervises. Learn how to create/animate the Human Machine Interface (HMI) with Supervisory Control and Data Acquisition.
+
+
+                              </div>
+                              <div class="card-action" style="text-align:center;">
+                                <a onclick="$('#modal7').modal('open');" href="#">INFO &AMP; REGISTRATION</a>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+
+            </div>
+
+
+
+      </div>
+    </div>
+  </div>
+   <div id="modal1" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                         <span class="card-title"style="text-align:center;">B R A I N &nbsp; O &nbsp; B R A I N</span>
+                         <div class="divider"></div>
+                               <p>
+                              We will be teaching the basic working of an Arduino microcontroller during the workshop after which we would introduce you to the EEG sensor, which is used for retrieving brain signals. Also, we would be dealing with signal conditioning concepts that would be required to retrieve the brain signals. We would compute the frequency of the signals and would classify the signals into Alpha, Beta, Gamma etc. which indicate various states of the brain such as sleeping, alert state etc., and can be used to assess your sleep quality. <p>
+                              The content that would be covered includes the following: 
+                              <ul>
+                                  <li>-> Basics of Arduino MCU </li>
+                                  <li>-> Brief description of EEG sensor</li> 
+                                  <li>-> Concept of amplifiers and noise removal (Analog Electronics) </li>
+                                  <li>-> Plotting signals and computing frequency of a signal</li>
+                              </ul>
+                              <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Venkatesh : 7358405467<br>
+                                &nbsp; Naveed : 9159647127
+                      </div>
+                      <div class="divider"></div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                      </div>
+                    </div>
+  <div id="modal2" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">S M A R T &nbsp; A R M &nbsp; R O B O T &nbsp; S O R T E R</span>
+                   <div class="divider"></div>
+                         <p>
+                         The Industrial Revolution was one of the greatest contributing factors to the modern age. Now, with the advancements of robotics, our industries are experiencing a major transformation, with robots replacing human labour for monotonous or high precision tasks. Robotic Manipulators have played a major role in this automation revolution, with multi-DoF arms performing delicate, precise, and monotonous tasks with high reliability. In this workshop, we will build a 3 DoF robotic arm. This arm will be capable of arranging objects placed haphazardly in front of it, into perfect order. <p>
+                        A camera on the top will detect the objects and send the object position data to the controller(Arduino). The controller sends appropriate commands to the arm, which then fetches each of these objects,  and places them in the final desired position.
+                          <p>
+                        Content relevant to the workshop are:<p>
+                        1. Inverse Kinematics<br>
+                        2. Basics of Arduino<br>
+                        3. Image Processing(Outline)<br>
+                        4. Robot algorithm/code explanation.
+                        <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Anand : 8939043197<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal3" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">A N D R O I D &nbsp; A P P &nbsp; D E V E L O P M E N T</span>
+                   <div class="divider"></div>
+                         <p>
+                          Topics covered:  <p>
+                            -> Views including buttons, widgets<br>
+                            -> Accessing media through file manager<br>
+                            -> Shared preferences, process dialogue box<br>           
+                            -> Intents, Firebase<br>
+                            -> Fragments
+                         <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Mukundh : 9677022905<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal4" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">V I R T U A L&nbsp; S C R I B B L E &nbsp;  P A D</span>
+                   <div class="divider"></div>
+                         <p>
+                         Contents taught :<p>
+
+                          * Introduction to python<br>
+                          *‎ Basics of image processing<br>
+                          *‎ Introduction to OpenCV<br>
+                          *‎ Drawing functions in OpenCV<br>
+                          *‎ Color Masking and contours<br>
+                          *‎ Implementation of virtual scribble pad
+                          <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Jose : 934579386<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal5" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">Q U A D&nbsp; C O P T E R</span>
+                   <div class="divider"></div>
+                         <p>
+                          This workshop will help participants to understand the various unique engineering concepts in making the Quadcopter. They will also learn how to operate accelerometers, gyroscopes and wireless communication modules in controlling the quadcopter. 
+                          <p>
+                          Topics Covered:
+                          <p> 
+                          Multi-rotor vehicle(Introduction)<br>
+                          Understanding the Quad Dynamics <br>
+                          Basic Mechanics<br>
+                          Kinematics (Pitch,yaw,roll)<br>
+                          Circuitry of the quad (ESC , Transmitter/Receiver and batteries) <br>
+                          Sensors (IMU/Barometer) <br>
+                          Algorithm of Control Systems 
+                          <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Nithish : 7598340995<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal6" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">G E S T U R E &nbsp; C O N T R O L &nbsp; R O B O T</span>
+                   <div class="divider"></div>
+                <p>
+                  The objective of this workshop is to build a Gesture-Controlled differential drive robot. The robot is controlled by hand gestures. A mobile application is used to send the output of the accelerometer sensor in-built in the smartphone via Bluetooth communication using UART protocol to the microcontroller board, which is present on the differential drive robot. The microcontroller interprets the signals and controls the robot accordingly. Thus, a differential drive robot is controlled using hand gestures.
+                  <p>
+                  Concepts involved:<p>
+                  -> Microcontroller Peripheral Programming<br>
+                  -> Working and use of the Accelerometer Sensor<br> 
+                  -> Analog to Digital Conversion<br>
+                  -> Bluetooth communication between Android Phone App and Microcontroller<br>
+                  -> Functioning of a differential drive robot
+                  <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Subramanian : 9840740700<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+  <div id="modal7" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                   <span class="card-title"style="text-align:center;">S C A D A</span>
+                   <div class="divider"></div>
+                         <p>
+                         Contents taught:<p>
+                              ->  Basics of SCADA and associated systems<br>
+                              ->  Basics of PLC – Programmable Logic Controllers<br>
+                              ->  HMI creation using SCADA software – Wonderware Intouch<br>
+                              <p>
+                          Pre-Requisites:<p>
+                                 Laptop (fully charged)<br>
+                                 Specs:<br>
+                                 OS – Windows 7 or above<br>
+                                 RAM – 2GB or more
+                                <p>
+                                For Registration and other queries Contact:<p>
+                                &nbsp; Vignesh : 9487202737<br>
+                                &nbsp; Naveed : 9159647127
+                </div>
+                <div class="divider"></div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">X CLOSE</a>
+                </div>
+  </div>
+ <div class="footer_custom" style="font-family:Lato-Italic;"><span style="color:red;">&lt;/&gt;</span> with <span style="color:red;">&hearts;</span> by <a href="contacts.html">Team Sensors'18</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+     
+      $(document).ready(function(){
+
+     $(".button-collapse").sideNav({
+         closeOnClick: false,
+         draggable: true,
+         menuWidth: 300
+      });
+      $('.collapsible').collapsible();
+       $('.modal').modal();
+    
+  });
+     </script>
+    </body>
+  </html>
+        

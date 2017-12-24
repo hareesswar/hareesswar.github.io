@@ -1,0 +1,248 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <style type="text/css">
+               @font-face{
+         font-family:'Lato-Italic';
+         src: url('fonts/Lato-Italic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Regular';
+         src: url('fonts/Lato-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Light';
+         src: url('fonts/Lato-Light.ttf');
+        }
+        @font-face{
+         font-family:'Lato-LightItalic';
+         src: url('fonts/Lato-LightItalic.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Hairline';
+         src: url('fonts/Lato-Hairline.ttf');
+        }
+        body{
+          background-color: #cfd8dc;
+        }
+        .team_pic{
+          border-radius: 50%;
+          height: 170px;
+          width: 170px;
+          
+        }
+        /*
+        .team_pic:hover{
+          box-shadow:
+        
+        0 0 50px #fff,            
+        -10px 0 80px #f0f,       
+        10px 0 80px #0ff;
+        }
+        */
+        a#sensors{
+          color:white !important;
+        }
+        .header{
+          margin-top: 0px;
+          width: 100%;
+          background-color: black !important;
+          color:white !important;
+          height:100px;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+        .footer_custom {
+          position: relative;
+          
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          font-size: 13px;
+          text-align: center;
+        }
+        .title{
+          text-align: center;
+          font-family: Lato-Light;
+          
+          color:white !important;
+        }
+        .container{
+          margin-top: -30px;
+          font-family: Lato-Regular;
+        }
+        #ham{
+          float:left;
+          display: inline-block;
+          text-align: left !important;
+          padding-top: 15px;
+          padding-left: 10px;
+        }
+        .base_panel{
+          width:100%;
+          height:auto;
+          background-color:white;
+          border-radius:1px;
+        }
+        @media screen and (max-width: 480px) {
+          .header{
+            font-size: 20px;
+            padding-top: 20px;
+          }
+          .ham{
+            padding-left: 5px;
+          }
+          .base_panel{
+            width:90%;
+            margin-left: 5%;
+          }
+        }
+      </style>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+  
+      
+    <div class="header">
+      <div id="ham">
+        <a href="#" data-activates="slide-out" class="button-collapse" style="color: white !important;"><i class="material-icons">menu</i></a>
+      </div>
+      <div class="title">
+      <a href="index.html" id="sensors">Sensors '18  | </a>  C O N T A C T S
+      </div>
+    </div>
+
+      <ul id="slide-out" class="side-nav" style="z-index: 99999;color: #523 !important;font-family:Lato-Regular;">
+       <li style="height: 81px;cursor: pointer;" onclick="window.location.href='index.html'" ><div class="userView">
+      <div class="background" style="height: 81px;">
+        <center><img src="images/temp1.jpg" style="width: 300px;"></center>
+      </div>
+         </div></li>
+           <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="events.html" class="collapsible-header">Events<i class="material-icons">whatshot</i></a>
+            
+          </li>
+        </ul>
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a href="workshops.html" class="collapsible-header">Workshops<i class="material-icons">event_available</i></a>
+            
+          </li>
+        </ul>
+      </li>
+<li><div class="divider" class="collapsible-header"></div></li>
+       <li><a href="contacts.html" class="collapsible-header">Contacts<i class="material-icons">group</i></a></li>
+      <li><a href="about.html" class="collapsible-header">About<i class="material-icons">feedback</i></a></li>
+      <li><a href="faqs.html" class="collapsible-header">FAQs<i class="material-icons">lightbulb_outline</i></a></li>
+      <li><a href="schedule.pdf" download class="collapsible-header">Schedule<i class="material-icons">schedule</i></a></li>
+ 
+      <li><a href="https://www.facebook.com/sensorsNITTrichy" target="_blank" class="collapsible-header">Connect to Facebook<i class="material-icons">thumb_up</i></a></li>
+       <li><div class="divider"></div></li>
+      <li style="font-family:Lato-Italic;"><a href="#!" class="collapsible-header">Join Us this January 29<sup>th</sup> &amp; 30<sup>th</sup><i class="material-icons">sentiment_very_satisfied</i></a></li>
+      <li><div class="divider"></div></li>
+      
+      </ul>
+ <div class="container">
+ 
+      <div class="base_panel">
+        <div class="card-panel grey lighten-3">
+          <div class="row">
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Murali<span><br><span style="font-size:12px;font-family:Lato-Italic;">Chairman</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 8098388128</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Bala<span><br><span style="font-size:12px;font-family:Lato-Italic;">Overall Coordinator</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9841549244</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Nivetha<span><br><span style="font-size:12px;font-family:Lato-Italic;">Treasurer</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 7418384717</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Vignesh<span><br><span style="font-size:12px;font-family:Lato-Italic;">Technical Secretary</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9487202737</span></center>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Manideep<span><br><span style="font-size:12px;font-family:Lato-Italic;">Organising Head</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 8500808529</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Adityan<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Content</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9500086379</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Shashank<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Design</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9962305296</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Naveed<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Workshops</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9159647127</span></center>
+    </div>
+  </div>
+      <div class="row">
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Swaroopa<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Events</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9994300112</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Vaneesha<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Events</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9952214684</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Lohita<span><br><span style="font-size:12px;font-family:Lato-Italic;">Executive Committee Member</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9566084221</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Dinesh<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Publicity</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9841509421</span></center>
+    </div>
+  </div>
+       <div class="row">
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Tinu<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Web Operations</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9445564854</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Akshaya<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Public Relations</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9843051016</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Vishwath<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Hospitality</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 9789341181</span></center>
+    </div>
+    <div class="col s12 m6 l3">
+      <center><img src="images/new.jpg" class="team_pic"><br>
+        <span style="font-size: 15px;">Akhila<span><br><span style="font-size:12px;font-family:Lato-Italic;">Head, Ambiance</span><br><spans style="font-size: 12px;font-family:Lato-Light;">+91 8985879981</span></center>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+
+ <div class="footer_custom" style="font-family:Lato-Italic;"><span style="color:red;">&lt;/&gt;</span> with <span style="color:red;">&hearts;</span> by <a href="contacts.html">Team Sensors'18</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+      $(".button-collapse").sideNav({
+         closeOnClick: false,
+         draggable: true,
+         menuWidth: 300
+      });
+      $('.collapsible').collapsible();
+     </script>
+    </body>
+  </html>
+        
