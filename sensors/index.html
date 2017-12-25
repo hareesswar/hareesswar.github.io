@@ -18,7 +18,22 @@
          font-family:'Lato-Regular';
          src: url('fonts/Lato-Regular.ttf');
         }
-       
+        @font-face{
+         font-family:'Lato-Light';
+         src: url('fonts/Lato-Light.ttf');
+        }
+         @font-face{
+         font-family:'Monoton-Regular';
+         src: url('fonts/Monoton-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Death-Star';
+         src: url('fonts/Death Star.otf');
+        }
+        @font-face{
+         font-family:'Beon';
+         src: url('fonts/beon-webfont.ttf');
+        }
 body{
   background-color: black;
   color: white;
@@ -34,8 +49,36 @@ body{
 #sensorslogo{
   display: block;
   margin:auto; 
-  margin-top: -50px;
+  margin-top: -60px;
   width:400px;
+}
+.text{
+  position: relative;
+  font-family: Monoton-Regular;
+  font-size: 30px;
+  text-align: center;
+  margin-top: -4em;
+  
+}
+.text {
+-webkit-animation: text 1.5s ease-in-out infinite alternate;
+-moz-animation: text 1.5s ease-in-out infinite alternate;
+animation: text 1.5s ease-in-out infinite alternate;
+}
+.text:hover
+{
+    animation: step-end;
+}
+.text:hover {
+color: #228DFF;
+}
+@-webkit-keyframes text {
+from {
+text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #228DFF, 0 0 8px #228DFF, 0 0 10px #228DFF, 0 0 12px #228DFF, 0 0 18px #228DFF;
+}
+to {
+text-shadow: 0 0 .5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #228DFF, 0 0 4px #228DFF, 0 0 5px #228DFF, 0 0 6px #228DFF, 0 0 9px #228DFF;
+}
 }
 #ham{
   text-align: right;
@@ -57,14 +100,18 @@ body{
     width: 60%;
   }
   #sensorslogo{
-    width:85%;
-    margin-top: -10px;
+    width:80%;
+    margin-top: -35px;
   }
   .wrap{
-    margin-top: 50px;
+    margin-top: 3em;
   }
   .footer_custom{
     font-size: 12px;
+  }
+  .text{
+    font-size: 20px;
+    margin-top: -3.25em;
   }
 }
 
@@ -117,8 +164,8 @@ body{
   </div>
        
          
-          <img src="images/logo_blue.gif" id="sensorslogo" >
-         
+          <img src="images/sen_logo.gif" id="sensorslogo" >
+         <div class="text"> S E N S O R S ' 1 8</div>
           <div class="wrap">
             
             <div class="cube">
@@ -150,7 +197,8 @@ body{
           
 
             .wrap {
-                margin-top: 30px;
+                margin-top: 7em;
+                margin-bottom: 5em;
                 perspective: 1000px;
                 perspective-origin: 50% 50%;
                 

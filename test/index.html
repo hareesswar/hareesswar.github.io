@@ -18,6 +18,18 @@
          font-family:'Lato-Regular';
          src: url('fonts/Lato-Regular.ttf');
         }
+        @font-face{
+         font-family:'Monoton-Regular';
+         src: url('fonts/Monoton-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Pacifico-Regular';
+         src: url('fonts/Pacifico-Regular.ttf');
+        }
+        @font-face{
+         font-family:'Lato-Light';
+         src: url('fonts/Lato-Light.ttf');
+        }
        
 body{
   background-color: black;
@@ -31,11 +43,62 @@ body{
   padding-top: 17px;
   padding-left: 20px;
 }
-#sensorslogo{
-  display: block;
-  margin:auto; 
-  margin-top: -50px;
-  width:400px;
+.neon{
+  font-family: Monoton-Regular;
+  font-size: 100px;  
+  margin-top: 5%;
+}
+.neon-yellow{
+  font-family: Pacifico-Regular;
+  font-size: 35px;
+  text-shadow: 0 0 .5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #FFDD1B, 0 0 4px #FFDD1B, 0 0 5px #FFDD1B, 0 0 6px #FFDD1B, 0 0 9px #FFDD1B; 
+}
+.neon {
+-webkit-animation: neon 1.5s ease-in-out infinite alternate;
+-moz-animation: neon 1.5s ease-in-out infinite alternate;
+animation: neon 1.5s ease-in-out infinite alternate;
+}
+.neon:hover
+{
+    animation: step-end;
+}
+.neon:hover {
+color: #228DFF;
+}
+/*
+.neon-yellow {
+-webkit-animation: neon-yellow 1.5s ease-in-out infinite alternate;
+-moz-animation: neon-yellow 1.5s ease-in-out infinite alternate;
+animation: neon-yellow 1.5s ease-in-out infinite alternate;
+}
+.neon-yellow:hover
+{
+    animation: step-end;
+}
+.neon-yellow:hover {
+color: #228DFF;
+}
+*/
+
+.neon-yellow:hover {
+color: #FFDD1B;
+text-shadow:none;
+}
+@-webkit-keyframes neon {
+from {
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+}
+to {
+text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #228DFF, 0 0 18px #228DFF, 0 0 20px #228DFF, 0 0 25px #228DFF, 0 0 37px #228DFF;
+}
+}
+@-webkit-keyframes neon-yellow {
+from {
+text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #FFDD1B, 0 0 8px #FFDD1B, 0 0 10px #FFDD1B, 0 0 12px #FFDD1B, 0 0 18px #FFDD1B;
+}
+to {
+text-shadow: 0 0 .5px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 2px #FFDD1B, 0 0 4px #FFDD1B, 0 0 5px #FFDD1B, 0 0 6px #FFDD1B, 0 0 9px #FFDD1B;
+}
 }
 #ham{
   text-align: right;
@@ -43,8 +106,8 @@ body{
   padding-right: 20px;
 }
 .footer_custom {
-  position: relative;
-  margin-top: 70px;
+  position: absolute;
+  
   right: 0;
   bottom: 0;
   left: 0;
@@ -52,13 +115,22 @@ body{
   font-size: 13px;
   text-align: center;
 }
+.button{
+  text-align: center;
+  border-color: white;
+  border-width: 2px;
+}
 @media screen and (max-width: 480px) {
   #nittlogo{
     width: 60%;
   }
-  #sensorslogo{
-    width:85%;
-    margin-top: -10px;
+  .neon{
+    font-size: 40px;
+    margin-top: 30%;
+  }
+  .neon-yellow{
+    font-size: 20px;
+    margin-top: -10%;
   }
   .wrap{
     margin-top: 50px;
@@ -117,33 +189,13 @@ body{
   </div>
        
          
-          <img src="images/logo_blue.gif" id="sensorslogo" >
-         
-          <div class="wrap">
-            
-            <div class="cube">
-              <a href="#" data-activates="slide-out" class="button-collapse">
-              <div class="front">
-                Events
-              </div>
-              <div class="back">
-                Schedule
-              </div>
-              <div class="top">
-                29-30 Jan 2018
-              </div>
-              <div class="bottom">
-                Workshops
-              </div>
-              <div class="left">
-                Contacts
-              </div>
-              <div class="right">
-                Accomodation
-              </div>
-            </a>
-            </div>
-          </div>
+<div class="neon" style="text-align:center;">
+  SENSORS '18
+</div>
+<p>&nbsp;
+<div class="neon-yellow" style="text-align:center;">
+  January 29<sup>th</sup>&nbsp;&amp;&nbsp;30<sup>th</sup>
+</div>
         </div>    
       <div class="footer_custom" style="font-family:Lato-Italic;"><span style="color:red;">&lt;/&gt;</span> with <span style="color:red;">&hearts;</span> by <a href="contacts.html">Team Sensors'18</div>
         <style>
