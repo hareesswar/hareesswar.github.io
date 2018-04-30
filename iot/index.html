@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>My first chart using FusionCharts Suite XT</title>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+<script type="text/javascript">
+    FusionCharts.ready(function(){
+    var fuelWidget = new FusionCharts({
+        type: 'cylinder',
+        dataFormat: 'json',
+        id: 'fuelMeter',
+        renderAt: 'chart-container',
+        width: '200',
+        height: '350',
+        dataSource: {
+            "chart": {
+                "theme": "fint",
+                "caption": "Water Tank",
+                "subcaption": "Digital Twin",
+                "lowerLimit": "0",
+                "upperLimit": "120",
+                "lowerLimitDisplay": "Empty",
+                "upperLimitDisplay": "Full",
+                "numberSuffix": " ltrs",
+                "showValue": "1",
+                "chartBottomMargin": "25",
+                //Changing the Cylinder fill color
+                "cylFillColor": "#1aaf5d"
+            },
+            "value": "0"
+    },
+    "events": {
+        "rendered": function(evtObj, argObj) {
+          
+                gaugeRef = evtObj.sender;
+                gaugeRef.chartInterval = setInterval(function() {
+                
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var level = data['feeds'][1]['field1'];
+                    console.log(level);
+                    gaugeRef.feedData("&value=" + level);
+                }
+                request.send();
+            }, 5000);
+        },
+        "disposed": function(evt, arg) {
+            clearInterval(evt.sender.chartInterval);
+        }
+    }
+}).render();
+});
+FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'hlineargauge',
+    renderAt: 'chart-container-1',
+    id: 'cpu-linear-gauge-1',
+    width: '200',
+    height: '150',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "theme": "fint",
+            "editMode": "1",
+            "subcaption": "Turbidity",
+            "lowerLimit": "0",
+            "upperLimit": "100",
+            
+            "chartBottomMargin": "40",
+            "valueFontSize": "11",
+            "valueFontBold": "0"
+        },
+        "colorRange": {
+            "color": [{
+                "minValue": "0",
+                "maxValue": "35",
+                "label": "Low",
+            }, {
+                "minValue": "35",
+                "maxValue": "70",
+                "label": "Moderate",
+            }, {
+                "minValue": "70",
+                "maxValue": "100",
+                "label": "High",
+            }]
+        },
+        "pointers": {
+            "pointer": [{
+                "value": "0"
+            }]
+        },
+        
+    },
+      "events": {
+        "rendered": function(evtObj, argObj) {
+            evtObj.sender.intervalVar = setInterval(function() {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var turbidity = data['feeds'][1]['field2'];
+                    console.log(turbidity);
+                    FusionCharts.items["cpu-linear-gauge-1"].feedData("value=" + turbidity);
+                }
+                request.send();
+                
+                
+            }, 5000);
+        },
+        "disposed": function(evtObj, argObj) {
+            clearInterval(evtObj.sender.intervalVar);
+        }
+    }
+})
+    .render();
+});
+
+FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'hlineargauge',
+    renderAt: 'chart-container-2',
+    id: 'cpu-linear-gauge-2',
+    width: '200',
+    height: '150',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "theme": "fint",
+            "editMode": "1",
+            "subcaption": "pH",
+            "lowerLimit": "0",
+            "upperLimit": "14",
+            
+            "chartBottomMargin": "40",
+            "valueFontSize": "11",
+            "valueFontBold": "0"
+        },
+        "colorRange": {
+            "color": [{
+                "minValue": "0",
+                "maxValue": "7",
+                "label": "Acidic",
+            }, 
+            {
+                "minValue": "7",
+                "maxValue": "14",
+                "label": "Basic",
+            }]
+        },
+        "pointers": {
+            "pointer": [{
+                "value": "0"
+            }]
+        },
+        
+    },
+      "events": {
+        "rendered": function(evtObj, argObj) {
+            evtObj.sender.intervalVar = setInterval(function() {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var pH = data['feeds'][1]['field3'];
+                    console.log(turbidity);
+                    FusionCharts.items["cpu-linear-gauge-2"].feedData("value=" + pH);
+                }
+                request.send();
+                
+                
+            }, 5000);
+        },
+        "disposed": function(evtObj, argObj) {
+            clearInterval(evtObj.sender.intervalVar);
+        }
+    }
+})
+    .render();
+});
+
+</script>
+</head>
+<body>
+    <div id="chart-container">FusionCharts XT will load here!</div>
+    <div id="chart-container-1">FusionCharts XT will load here!</div>
+    <div id="chart-container-2">FusionCharts XT will load here!</div>
+</body>
+</html>
