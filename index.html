@@ -1,343 +1,191 @@
-
-<!DOCTYPE HTML>
 <html>
 <head>
-<title>NIT-T</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
-<script type="text/javascript" src="js/jquery.openCarousel.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
- <script>
-    $(function () {
-
-      // Slideshow 1
-      $("#slider1").responsiveSlides({
-        maxwidth:1600,
-        speed: 600
-      });
+<title>My first chart using FusionCharts Suite XT</title>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+<script type="text/javascript">
+    FusionCharts.ready(function(){
+    var fuelWidget = new FusionCharts({
+        type: 'cylinder',
+        dataFormat: 'json',
+        id: 'fuelMeter',
+        renderAt: 'chart-container',
+        width: '200',
+        height: '350',
+        dataSource: {
+            "chart": {
+                "theme": "fint",
+                "caption": "Water Tank",
+                "subcaption": "Digital Twin",
+                "lowerLimit": "0",
+                "upperLimit": "120",
+                "lowerLimitDisplay": "Empty",
+                "upperLimitDisplay": "Full",
+                "numberSuffix": " ltrs",
+                "showValue": "1",
+                "chartBottomMargin": "25",
+                //Changing the Cylinder fill color
+                "cylFillColor": "#1aaf5d"
+            },
+            "value": "0"
+    },
+    "events": {
+        "rendered": function(evtObj, argObj) {
+          
+                gaugeRef = evtObj.sender;
+                gaugeRef.chartInterval = setInterval(function() {
+                
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var level = data['feeds'][1]['field1'];
+                    console.log(level);
+                    gaugeRef.feedData("&value=" + level);
+                }
+                request.send();
+            }, 5000);
+        },
+        "disposed": function(evt, arg) {
+            clearInterval(evt.sender.chartInterval);
+        }
+    }
+}).render();
 });
- </script>
- <style type="text/css">
- 	.wrap
- 	{
- 		width: 100%;
- 	}
- 	.subNavBtn
- 	{
- 		width: 10.1%;
- 	}
- 	.rslides img
- 	{
- 		width: 100%;
- 		left:9%;
- 		 
- 	}
- 	.rslides
- 	{
- 		height: 10%;
+FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'hlineargauge',
+    renderAt: 'chart-container-1',
+    id: 'cpu-linear-gauge-1',
+    width: '200',
+    height: '150',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "theme": "fint",
+            "editMode": "1",
+            "subcaption": "Turbidity",
+            "lowerLimit": "0",
+            "upperLimit": "100",
+            
+            "chartBottomMargin": "40",
+            "valueFontSize": "11",
+            "valueFontBold": "0"
+        },
+        "colorRange": {
+            "color": [{
+                "minValue": "0",
+                "maxValue": "35",
+                "label": "Low",
+            }, {
+                "minValue": "35",
+                "maxValue": "70",
+                "label": "Moderate",
+            }, {
+                "minValue": "70",
+                "maxValue": "100",
+                "label": "High",
+            }]
+        },
+        "pointers": {
+            "pointer": [{
+                "value": "0"
+            }]
+        },
+        
+    },
+      "events": {
+        "rendered": function(evtObj, argObj) {
+            evtObj.sender.intervalVar = setInterval(function() {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var turbidity = data['feeds'][1]['field2'];
+                    console.log(turbidity);
+                    FusionCharts.items["cpu-linear-gauge-1"].feedData("value=" + turbidity);
+                }
+                request.send();
+                
+                
+            }, 5000);
+        },
+        "disposed": function(evtObj, argObj) {
+            clearInterval(evtObj.sender.intervalVar);
+        }
+    }
+})
+    .render();
+});
 
- 	}
- </style>
- 
- <!------ menu ------>
-  <script type="text/javascript">	
-   $(document).ready( function() {
-    $('.subMenu').smint({
-    	'scrollSpeed' : 1000
-    });
+FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts({
+    type: 'hlineargauge',
+    renderAt: 'chart-container-2',
+    id: 'cpu-linear-gauge-2',
+    width: '200',
+    height: '150',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "theme": "fint",
+            "editMode": "1",
+            "subcaption": "pH",
+            "lowerLimit": "0",
+            "upperLimit": "14",
+            
+            "chartBottomMargin": "40",
+            "valueFontSize": "11",
+            "valueFontBold": "0"
+        },
+        "colorRange": {
+            "color": [{
+                "minValue": "0",
+                "maxValue": "7",
+                "label": "Acidic",
+            }, 
+            {
+                "minValue": "7",
+                "maxValue": "14",
+                "label": "Basic",
+            }]
+        },
+        "pointers": {
+            "pointer": [{
+                "value": "0"
+            }]
+        },
+        
+    },
+      "events": {
+        "rendered": function(evtObj, argObj) {
+            evtObj.sender.intervalVar = setInterval(function() {
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/484834/feeds.json?api_key=OBONKE2V82I97B7N&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var pH = data['feeds'][1]['field3'];
+                    console.log(turbidity);
+                    FusionCharts.items["cpu-linear-gauge-2"].feedData("value=" + pH);
+                }
+                request.send();
+                
+                
+            }, 5000);
+        },
+        "disposed": function(evtObj, argObj) {
+            clearInterval(evtObj.sender.intervalVar);
+        }
+    }
+})
+    .render();
 });
 
 </script>
-<link rel="stylesheet" href="css/swipebox.css">
-<script src="js/ios-orientationchange-fix.js"></script> 
-<script src="js/jquery.swipebox.min.js"></script> 
-<script type="text/javascript">
-		jQuery(function($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
-	<!-- Eng Light Box -->
 </head>
-<body background-image="images/background.jpg">
-   <!-- Header -->
-	<div class="header sTop">
-		 <div class="header_top">
-		 	  <div class="wrap">	 			
-				<div id="toplinkbar">		
-      <div  style="float:left">		
-        <a href="#">Placements</a>&nbsp;|
-        <a href="#">Library</a>&nbsp;|
-        <a href="#">Departments</a>&nbsp;|
-      </div>
-      <div  style="float:right">
-		<a href="#">Search</a>&nbsp;|
-		<a href="#">Webmail</a>&nbsp;|
-		<a href="#">Sitemap</a>&nbsp;|
-        <a href="#" id="dashboardbut" onmousedown="toggleDashboard('actionbar',this);">Dashboard</a>
-      </div>
-    </div>
-				<div class="logo">
-					<a href="index.html"><img src="images/nitt.png"></a>
-				</div>	
-				
- 				<div class="clear"></div>		   
- 	   		</div>
- 	   </div> 	  	          
- 	           <div class="subMenu">
- 	           	  <div class="wrap" class="grid">
-					<div class="inner">
-						<ul>
-						<li> <a href="#" id="sTop" class="subNavBtn">About</a> </li>
-						<li> <a href="#" id="s1" class="subNavBtn">Administration</a> </li>
-						<li> <a href="#" id="s2" class="subNavBtn">Academic</a> </li>
-						<li> <a href="#" id="s3" class="subNavBtn">Admissions</a> </li>
-						<li>  <a href="#" id="s4" class="subNavBtn">Departments</a> </li>
-						<li>  <a href="#" id="s4" class="subNavBtn">Events</a> </li>
-						<li> <a href="#" id="s5" class="subNavBtn">Contact</a> </li>
-						<div class="clear"></div>
-					 </ul>
-					</div>
-					</div>
-				</div>	
-			<div class="header_bottom">
-				<div class="wrap">
-				<div class="image-slider">
-				   
-				    <ul class="rslides" id="slider1">
-				       <li><img src="images/slide-4.jpg" alt="" /></li>
-				        <li><img src="images/slide-1.jpg" alt="" /></li>
-				      <li><img src="images/slide-2.jpg" alt="" /></li>
-				      <li><img src="images/slide-3.jpg" alt="" /></li>
-				      <li><img src="images/slide-5.JPG" alt="" /></li>				     
-				    </ul>
-				    
-			 </div>
-			</div>
-		 </div>	
-	 </div>
-	   <!-- Ends Header -->
- <!-- Main Content -->
- <div class="main">
- 	<div class="content">
-
- 		<div class="wrap">
- 			<!-- About page -->
-         	<div class="grid1">
-			<h2>Latest News</h2>
-				<div class="news">
-					<marquee behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">				
-						<p>MS and Ph.D advertisement for Jan 2016 session<br/>
-							 <a href="#">4 hours ago</a></p>
-						<p>Wanted Data Entry Operator for Research and Consultancy wing of NIT-T<br/>
-							 <a href="#">6 hours ago</a></p>
-						<p>Wanted JRF for MME department<br/>
-							 <a href="#">1 day ago</a></p>
-						<p>List of shortlisted candidates for Staff Nurse<br/>
-							 <a href="#">1 day ago</a></p>
-						<p>Alumni Recall-website<br/>
-							 <a href="#">2 days ago</a></p>
-						<p>MCA admission notice<br/>
-							 <a href="#">2 days ago</a></p>
-						
-						</marquee>
-				</div>
-		</div>
-        
-	      <div class="grid2">
-	    		<h2>VISION</h2>
-	    		<p>To provide valuable resources for industry and society through excellence in technical education and research.
-	    		<h2>MISSION</h2>	
-	   	 		<p>To offer state-of-the-art undergraduate, postgraduate and doctoral programmes.
-				<p>To generate new knowledge by engaging in cutting-edge research.
-				<p>To undertake collaborative projects with academia and industries.
-				To develop human intellectual capability to its fullest potential.</p>
-	     </div>			   			   
-	          <div class="grid2">
-			    	<h2>QUICK LINKS</h2>
-					    <ul class="clear">
-            <li><a href="#">Alumni- RECAL Website</a></li>
-            <li><a href="#">Planning and development</a></li>
-            <li><a href="#">Institute Development</a></li>
-            <li><a href="#">Institute Employees Directory</a></li>
-            <li><a href="#">Internal Telephone Directory</a></li>
-            <li><a href="#">Connect NIT</a></li>
-            <li><a href="#">TEQIP-II</a></li>
-            <li><a href="#">Semester Results</a></li>
-            <li><a href="#">Facilities and services</a></li>
-            <li><a href="#">Time Table</a></li>
-          </ul>
-					</div>
-		   
-        <div class="clear"></div>
-  </div>
-
-
-
-              <div class="grid3">
-			    	<h2>Upcoming Events</h2>
-					   <div class="tweet_data">
-						<div class="tweet_img">
-							<img src="images/news.jpg" alt="">
-						</div>
-							<div class="tweet_desc">
-								 <h4>Dec 11, 2015</h4>
-							<p>Workshop for Welding Technology by Production Engg. department</div>
-						<div class="clear"></div>
-					</div>
-					<div class="tweet_data">
-						<div class="tweet_img">
-							<img src="images/news.jpg" alt="">
-						</div>
-							<div class="tweet_desc">
-								 <h4>Dec 21-22, 2015</h4>
-							<p>Workshop on Thermal and Elemental Analysis of solids and spectroscopic analysis of solid and liquid samples</p>
-							</div>
-						<div class="clear"></div>
-					</div>
-					<div class="tweet_data">
-						<div class="tweet_img">
-							<img src="images/news.jpg" alt="">
-						</div>
-							<div class="tweet_desc">
-								 <h4>Jan 28-29, 2016</h4>
-							<p>First research conclave on Emerging trends in Engineering,Science and Technology	</p>
-							</div>
-						
-					</div>
-					<p><a href="#">View all</a></p>
-
-		     </div>
-		     <div class="grid1">
-			
-              <h2 class="title">Notices/Downloads</h2>
-              <div class="box">
-                <p><a href="#">Circular for PG Students to collect their Certificates-Oct'15</a></p>
-                <p><a href="#">Retest Circular for I Semester M.Tech/M.Sc.,and MCA Students-Nov'15</a></p>
-                <p><a href="#">Revised Schedule for B.Tech III,V and VII Semester Examinations-Nov'15</a></p>
-                <p><a href="#">M.Tech. Spot Admission Circular, M.Tech Vacancy Position</a></p>
-                <p><a href="#">B.Tech. First Year Syllabus 2015-16</a></p>
-                <p><a href="#">Dean Academic Circulars on Cycle Test, Semester Examination, Academic Schedule,etc.</a></p>
-              </div>
-		     </div>
-        
-  <div class="grid2">
-  		<h2>in media</h2>
-  		<iframe width="94%" height="100%" src="http://www.youtube.com/embed/JCFGOr2DdQA">
-	</iframe>
-
-  </div>
-  <div class="clear"></div>
-  </div>
-
-   <div class="section s1">
-				<div class="section group">
-				<div class="grid_1_of_4 images_1_of_4">
-					 <img src="images/csg.jpg" alt="" />
-					 
-					 <p>Computer Support Group</p>
-				     <div class="button"><span><a href="#">Read More</a></span></div>
-				</div>
-				
-				<div class="grid_1_of_4 images_1_of_4">
-					 <img src="images/sport.jpg" alt="" />
-					 
-					 <p>Sport Center</p>
-				     <div class="button"><span><a href="#">Read More</a></span></div>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					 <img src="images/library.jpg" alt="" />
-					 
-					 <p>Central Library</p>
-				     <div class="button"><span><a href="#">Read More</a></span></div>
-				</div>
-				<div class="grid_1_of_4 images_1_of_4">
-					 <img src="images/hospi.JPG" alt="" />
-					 
-					 <p>NIT-T Hospital</p>
-				     <div class="button"><span><a href="#">Read More</a></span></div>
-				</div>
-			</div>
-			   
-	  
-<!-- End About page -->      
-			
-			<!-- End Contact page -->
- </div>
- </div>
-</div>
- <!-- Footer Start -->
- <div class="footer">
-	<div class="wrap">
-		<div class="footer-grides">
-		   <div class="foot-1" style="margin-left:0;text-align:center">
-			<div class="foot_contact">
-      <h2>Contact Us</h2>
-      <address>
-      National Institute of Technology<br />
-      Tiruchirappalli - 620015<br />
-      Tamil Nadu, INDIA
-      </address>
-      <ul>
-        <li><strong>Phone:</strong> +91-431-2501801 to 8 </li>
-        <li><strong>Fax:</strong> +91-431-2500133</li>
-        <!--<li class="last"><strong>Email:</strong> <a href="#">contact@mydomain.com</a></li> -->
-      </ul>
-    </div>
-        </div>
-    <div class="footbox" style="float:left;margin-left:2%">
-      <h2>Academics</h2>
-      <ul>
-        <li><a href="#">Academic Programmes</a></li>
-        <li><a href="#">Department</a></li>
-        <li><a href="#">Faculty</a></li>
-        <li><a href="#">Rules and Regulations</a></li>
-        <li><a href="#">Scholarships</a></li>
-      </ul>
-    </div>
-    <div class="footbox" style="float:left;margin-left:2%">
-      <h2>Other Links</h2>
-      <ul>
-        <li><a href="#">Tenders and Notices</a></li>
-        <li><a href="#">Job Opportunities</a></li>
-        <li><a href="#">RTI</a></li>
-        <li><a href="#">Recal-Alumni</a></li>
-        <li><a href="#">SiteMap</a></li>
-        
-      </ul>
-    </div>
-    <div class="footbox" style="float:left;margin-left:2%">
-      <h2>Student Life</h2>
-      <ul>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Clubs and Associations</a></li>
-        <li><a href="#">Facilities and Services</a></li>
-        <li><a href="#">Hostel and Messes</a></li>
-        <li><a href="#">Office of the Dean(Students)</a></li>
-        
-      </ul>
-    </div>
-    <div class="footbox" style="float:left;margin-left:2%">
-      <h2>Admissions</h2>
-      <ul>
-        <li><a href="#">B.Tech./B.Arch.</a></li>
-        <li><a href="#">M.Tech./M.Sc.</a></li>
-        <li><a href="#">MCA/MBA</a></li>
-        <li><a href="#">MS(By Reasearch)</a></li>
-        <li><a href="#">Ph.D.</a></li>
-        
-      </ul>
-    </div>
-    
-		<div class="clear"></div>
-	</div>
-  </div>
-		  <div class="copy_right">
-				<p>NIT Trichy © All rights Reseverd | Design by  Delta Force</p>
-		   </div>
-	</div>
+<body>
+    <div id="chart-container">FusionCharts XT will load here!</div>
+    <div id="chart-container-1">FusionCharts XT will load here!</div>
+    <div id="chart-container-2">FusionCharts XT will load here!</div>
 </body>
 </html>
-
