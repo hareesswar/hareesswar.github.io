@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>My first chart using FusionCharts Suite XT</title>
+<title>Digital Twin</title>
 <script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
 <script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
 <script type="text/javascript">
@@ -10,7 +10,7 @@
         dataFormat: 'json',
         id: 'fuelMeter',
         renderAt: 'chart-container',
-        width: '200',
+        width: '250',
         height: '350',
         dataSource: {
             "chart": {
@@ -57,7 +57,7 @@ FusionCharts.ready(function(){
     type: 'hlineargauge',
     renderAt: 'chart-container-1',
     id: 'cpu-linear-gauge-1',
-    width: '200',
+    width: '400',
     height: '150',
     dataFormat: 'json',
     dataSource: {
@@ -123,7 +123,7 @@ FusionCharts.ready(function(){
     type: 'hlineargauge',
     renderAt: 'chart-container-2',
     id: 'cpu-linear-gauge-2',
-    width: '200',
+    width: '400',
     height: '150',
     dataFormat: 'json',
     dataSource: {
@@ -165,7 +165,7 @@ FusionCharts.ready(function(){
                 request.onload = function () {
                     var data = JSON.parse(this.response);
                     var pH = data['feeds'][1]['field3'];
-                    console.log(turbidity);
+                    console.log(pH);
                     FusionCharts.items["cpu-linear-gauge-2"].feedData("value=" + pH);
                 }
                 request.send();
@@ -184,8 +184,8 @@ FusionCharts.ready(function(){
 </script>
 </head>
 <body>
-    <div id="chart-container">FusionCharts XT will load here!</div>
-    <div id="chart-container-1">FusionCharts XT will load here!</div>
-    <div id="chart-container-2">FusionCharts XT will load here!</div>
+    <div id="chart-container">Water Tank will load here!</div>
+    <div id="chart-container-1">Turbidity will load here!</div>
+    <div id="chart-container-2">pH will load here!</div>
 </body>
 </html>
