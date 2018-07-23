@@ -1,0 +1,66 @@
+
+
+<html>
+<head>
+<title>Water Tank</title>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="http://static.fusioncharts.com/code/latest/themes/fusioncharts.theme.fint.js?cacheBust=56"></script>
+<script type="text/javascript">
+    FusionCharts.ready(function(){
+    var fuelWidget = new FusionCharts({
+        type: 'cylinder',
+        dataFormat: 'json',
+        id: 'fuelMeter',
+        renderAt: 'chart-container',
+        width: '350',
+        height: '500',
+        dataSource: {
+            "chart": {
+                "theme": "fint",
+                "caption": "Water Tank",
+                "lowerLimit": "0",
+                "upperLimit": "57",
+                "lowerLimitDisplay": "0cm",
+                "upperLimitDisplay": "57cm",
+                "numberSuffix": " cm ",
+                "showValue": "1",
+                "chartBottomMargin": "25",
+                //Changing the Cylinder fill color
+                "cylFillColor": "#1aaf5d"
+            },
+            "value": "0"
+    },
+    "events": {
+        "rendered": function(evtObj, argObj) {
+          
+                gaugeRef = evtObj.sender;
+                gaugeRef.chartInterval = setInterval(function() {
+                
+                var request = new XMLHttpRequest();
+                request.open('GET', 'https://api.thingspeak.com/channels/534654/feeds.json?api_key=4FB373OC4JEA041E&results=2', true);
+                request.onload = function () {
+                    var data = JSON.parse(this.response);
+                    var level = data['feeds'][1]['field1'];
+                    console.log(level);
+                    gaugeRef.feedData("&value=" + level);
+                }
+                request.send();
+            }, 5000);
+        },
+        "disposed": function(evt, arg) {
+            clearInterval(evt.sender.chartInterval);
+        }
+    }
+}).render();
+});
+
+
+</script>
+</head>
+<body>
+<center>
+    <div id="chart-container">Water Tank will load here!</div>
+    
+</center>
+</body>
+</html>
